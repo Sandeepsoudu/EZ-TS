@@ -1,0 +1,6 @@
+b=input()
+a=[int(x) for x in b.split()]
+for i in range(0,len(a)):
+    if i not in a:
+        print(i)
+        break
