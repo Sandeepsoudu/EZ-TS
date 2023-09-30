@@ -6,3 +6,6 @@ for i in range(n):
     l.append(a)
     
 print(l)
+for i in range(n):
+    print(l.pop())
+print(l)
