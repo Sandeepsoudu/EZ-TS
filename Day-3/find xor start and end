@@ -2,9 +2,7 @@ a=int(input())
 b=int(input())
 xor=0
 if(a>b):
-    c=a
-    a=b
-    b=c
-for i in range(a,b):
-    xor=xor^i
+    a,b=b,a
+for i in range(a,b+1):
+    xor+=i
 print(xor)
