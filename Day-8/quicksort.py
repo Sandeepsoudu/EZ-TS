@@ -8,8 +8,6 @@ def quick_sort(arr):
     right = [x for x in arr if x > pivot]
     
     return quick_sort(left) + middle + quick_sort(right)
-
-# Example usage:
 my_list =list(map(int,input("enter the elements").split()))
 sorted_list = quick_sort(my_list)
 print(sorted_list)
