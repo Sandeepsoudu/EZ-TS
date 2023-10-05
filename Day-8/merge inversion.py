@@ -1,4 +1,5 @@
 def mergesort(arr):
+    global c
     if len(arr)>1:
         mid=len(arr)//2
         left=arr[:mid]
@@ -12,6 +13,7 @@ def mergesort(arr):
                 i+=1
             else:
                 arr[k]=right[j]
+                c+=len(left)-i
                 j+=1
             k+=1
         while i<len(left):
@@ -20,9 +22,12 @@ def mergesort(arr):
             k+=1
         while j<len(right):
             arr[k]=right[j]
+            c+=len(left)-i
             j+=1
             k+=1
+    return c
 arr=list(map(int,input().split()))
-mergesort(arr)
-print(arr)
+c=0
+print(mergesort(arr))
+
 
