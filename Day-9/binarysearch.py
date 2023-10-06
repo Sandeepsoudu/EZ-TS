@@ -2,13 +2,13 @@ def binary_search(arr,target):
     left=0
     right=len(arr)-1
     while left<=right:
-        mid=left+(right-left)//2
+        mid=(left+right)//2
         if arr[mid]==target:
             return mid
         elif arr[mid]>target:
-            return mid-1
+            right=mid-1
         else:
-            return mid+1
+            left=mid+1
     return -1
 arr=list(map(int,input().split()))
 target=int(input())
