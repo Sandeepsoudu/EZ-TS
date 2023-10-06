@@ -11,7 +11,9 @@ def count_sort(lst):
         res_arr[count_arr[lst[n]]-1]=lst[n]
         count_arr[lst[n]]-=1
         n-=1
-    for i in range(n):
-        print(res_arr[i])
+    for i in range(0,s):
+        lst[i]=res_arr[i]
 lst=list(map(int,input().split()))
 count_sort(lst)
+for i in range(0,len(lst)):
+    print(lst[i],end=" ")
