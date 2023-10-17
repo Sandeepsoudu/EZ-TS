@@ -1,6 +1,6 @@
 #leetcode problem
 class Solution:
-    def containsNearbyDuplicate(self, nums):
+    def containsNearbyDuplicate(self, nums,k):
         map={}
         for i in range(len(nums)):
             if nums[i] in map:
